@@ -43,6 +43,11 @@ def gen_file_widget(path):
     button.add(box)
 
     icon = Gtk.Image.new_from_icon_name(decide_icon(path), Gtk.IconSize.DIALOG)
+    if name.startswith("."):
+        icon.set_opacity(0.5)
+    
+    if len(name) > 20:
+        name = name[:20] + "..."
     label = Gtk.Label(label=name)
 
     box.pack_start(icon, False, False, 0)
