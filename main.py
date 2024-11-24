@@ -63,7 +63,7 @@ def gen_file_widget(path):
     else:
         def on_click(button):
             try:
-                quoted_path = f"'{path}'"  # Handle paths with spaces
+                quoted_path = f"'{os.path.abspath(path)}'"  # Handle paths with spaces
                 os.system(f"xdg-open {quoted_path}")
             except Exception as e:
                 print(f"Error opening file: {e}")
