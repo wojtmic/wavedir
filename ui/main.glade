@@ -24,6 +24,7 @@
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
+                    <property name="relief">none</property>
                     <signal name="clicked" handler="go_back" swapped="no"/>
                     <child>
                       <object class="GtkImage">
@@ -74,6 +75,7 @@
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
+                    <property name="relief">none</property>
                     <child>
                       <object class="GtkImage">
                         <property name="visible">True</property>
@@ -93,6 +95,7 @@
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
+                    <property name="relief">none</property>
                     <child>
                       <object class="GtkImage">
                         <property name="visible">True</property>
@@ -224,10 +227,13 @@
               <object class="GtkPaned" id="FilesPaned">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
+                                <!-- ...existing code... -->
                 <child>
-                  <object class="GtkViewport" id="View1Scroll">
+                  <object class="GtkScrolledWindow" id="View1Scroll">
                     <property name="visible">True</property>
-                    <property name="can-focus">False</property>
+                    <property name="can-focus">True</property>
+                    <property name="hscrollbar-policy">never</property>
+                    <property name="vscrollbar-policy">automatic</property>
                     <child>
                       <object class="GtkFlowBox" id="View1">
                         <property name="visible">True</property>
@@ -245,6 +251,7 @@
                     <property name="shrink">True</property>
                   </packing>
                 </child>
+                <!-- ...existing code... -->
                 <child>
                   <placeholder/>
                 </child>

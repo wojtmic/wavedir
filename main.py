@@ -6,6 +6,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GObject 
 
 fm_path = os.path.expanduser("~")
+show_hidden = True
 
 def decide_icon(path):
     """Determine appropriate icon name for file/folder"""
@@ -67,6 +68,7 @@ def gen_file_widget(path):
     return item
 
 def list_path(path):
+    global show_hidden
     print(f"Listing path: {path}")
     for child in fileview1.get_children():
         fileview1.remove(child)
@@ -89,7 +91,16 @@ def list_path(path):
                 hidden_files.append(item)
             else:
                 files_list.append(item)
+
+    if not show_hidden:
+        hidden_dirs = []
+        hidden_files = []
     
+    hidden_dirs.sort()
+    dirs.sort()
+    hidden_files.sort()
+    files_list.sort()
+
     files = hidden_dirs + dirs + hidden_files + files_list
 
     for item in files:
