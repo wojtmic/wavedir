@@ -1,0 +1,18 @@
+{
+    ".txt": "text-x-generic",
+    ".pdf": "application-pdf",
+    ".doc": "x-office-document",
+    ".docx": "x-office-document",
+    ".xls": "x-office-spreadsheet",
+    ".xlsx": "x-office-spreadsheet",
+    ".jpg": "image-x-generic",
+    ".jpeg": "image-x-generic",
+    ".png": "image-x-generic",
+    ".mp3": "audio-x-generic",
+    ".mp4": "video-x-generic",
+    ".py": "text-x-python",
+    ".sh": "text-x-script",
+    ".zip": "package-x-generic",
+    ".tar": "package-x-generic",
+    ".gz": "package-x-generic"
+}

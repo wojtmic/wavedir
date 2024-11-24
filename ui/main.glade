@@ -24,6 +24,7 @@
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
+                    <signal name="clicked" handler="go_back" swapped="no"/>
                     <child>
                       <object class="GtkImage">
                         <property name="visible">True</property>
@@ -39,33 +40,20 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="FowardButton">
-                    <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">True</property>
-                    <child>
-                      <object class="GtkImage">
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                        <property name="icon-name">go-next</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkEntry" id="PathEntry">
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="placeholder-text" translatable="yes">~</property>
+                    <property name="input-purpose">terminal</property>
+                    <property name="input-hints">GTK_INPUT_HINT_NO_EMOJI | GTK_INPUT_HINT_NONE</property>
+                    <signal name="activate" handler="path_change" swapped="no"/>
                     <signal name="editing-done" handler="path_change" swapped="no"/>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
+                    <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">2</property>
                   </packing>
